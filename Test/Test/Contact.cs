@@ -1,35 +1,35 @@
-﻿namespace IDList
+﻿namespace ID
 {
     class Contact
     {
-        public Contact(int id, int parent, string fname, string lname, string company, string city, string position, int no1, int no2, int no3)
+        public Contact(int id, int parent, string firstName, string lastName, string company, string city, string position, int firstNumber, int secondNumber, int thirdNumber)
         {
             ID = id;
             Parent = parent;
-            FName = fname;
-            LName = lname;
+            FirstName = firstName;
+            LastName = lastName;
             Company = company;
             City = city;
             Position = position;
-            No1 = no1;
-            No2 = no2;
-            No3 = no3;
+            FirstNumber = firstNumber;
+            SecondNumber = secondNumber;
+            ThirdNumber = thirdNumber;
 
 
         }
         public int ID;
         public int Parent;
-        public string FName;
-        public string LName;
+        public string FirstName;
+        public string LastName;
         public string Company;
         public string City;
         public string Position;
-        public int No1;
-        public int No2;
-        public int No3;
+        public int FirstNumber;
+        public int SecondNumber;
+        public int ThirdNumber;
         public override string ToString()
         {
-            return FName + " " + LName + " " + Company + " " + City + " " + Position;
+            return FirstName + " " + LastName + " " + Company + " " + City + " " + Position;
         }
     }
 

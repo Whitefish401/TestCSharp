@@ -1,20 +1,22 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using IDList;
-using System;
+using ID;
 
 
 namespace Sort
 {
-    class SortBy
+    class ValueSorter
     {
 
-        public IEnumerable<Contact> SortByID(List<Contact> contacts)
+        public IEnumerable<Contact> sortByID(List<Contact> contacts)
         {
-            var SortOrder = (from t in contacts
-                            orderby t.ID
-                             select t);
-            return SortOrder;
+            //var SortOrder = (from t in contacts
+            //                orderby t.ID
+            //                 select t);
+            var sortOrder = (contacts
+                            .OrderBy(C => C.ID)
+                            .Select(C => C));
+            return sortOrder;
         }
 
     }

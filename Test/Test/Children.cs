@@ -1,13 +1,13 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using IDList;
+using ID;
 
 
 namespace Children
 {
-    class GetChildren
+    class ChildFinder
     {
-        public IEnumerable<Contact> GetChildrenRows(Contact row, IEnumerable<Contact> contacts)
+        public IEnumerable<Contact> getChildrenRows(Contact row, IEnumerable<Contact> contacts)
         {
             var children = from c in contacts
                            where c.Parent == row.ID

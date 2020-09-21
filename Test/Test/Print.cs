@@ -1,24 +1,32 @@
 ﻿using System.Collections.Generic;
-using System.Linq;
-using IDList;
+using ID;
 using System;
 
 
 namespace Print
 {
-    class PrintValues
+    class ValuePrinter
     {
 
-        public void PrintContact(Contact row, IEnumerable<Contact> contacts, int level)
+        public void printContact(Contact row, IEnumerable<Contact> contacts, int level)
         {
-            var IndentSize = 4;
-            var indent = new string(' ', level * IndentSize);
-            Console.WriteLine(indent + row.ToString());
-            var getchildren = new Children.GetChildren();
-            var children = getchildren.GetChildrenRows(row, contacts);
+            var indentSize = 2;
+            var indent = new string(' ', level * indentSize);
+            var arrow = new string("->");
+            if (level == 1)
+            {
+                Console.WriteLine(indent + row.ToString());
+            }
+            else
+            {
+                var arrowIndent = new string(' ', (level - 1) * indentSize);
+                Console.WriteLine(arrowIndent + arrow + row.ToString());
+            }
+            var getChildren = new Children.ChildFinder();
+            var children = getChildren.getChildrenRows(row, contacts);
             foreach (var child in children)
             {
-                PrintContact(child, contacts, level+1);
+                printContact(child, contacts, level+1);
             }
 
         }
