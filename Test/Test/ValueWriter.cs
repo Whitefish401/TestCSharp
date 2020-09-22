@@ -1,18 +1,17 @@
 ﻿using System.Collections.Generic;
-using ID;
 
 
-namespace Write
+namespace CSharpTest
 {
     class ValueWriter
     {
         public void writeData(List<Contact> contacts)
         {
-            var sort = new Sort.ValueSorter();
+            var sort = new CSharpTest.ValueSorter();
             var sortedContacts = sort.sortByID(contacts);
-            var filter = new FilterValues.ParentFilter();
+            var filter = new CSharpTest.ParentFilter();
             var mainParents = filter.getMainParents(sortedContacts);
-            var print = new Print.ValuePrinter();
+            var print = new CSharpTest.ValuePrinter();
 
             foreach (var row in mainParents)
             {

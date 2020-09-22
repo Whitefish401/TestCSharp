@@ -1,4 +1,4 @@
-﻿namespace ID
+﻿namespace CSharpTest
 {
     class Contact
     {

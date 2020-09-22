@@ -1,16 +1,16 @@
 ﻿using System.Collections.Generic;
 
-namespace Test
+namespace CSharpTest
 {
     class Program
     {
         static void Main(string[] args)
         {
-            var reader = new FileReader.CSVReader();
+            var reader = new CSharpTest.CSVReader();
             List<string> list = reader.readCSVFile();
-            var idList = new ID.idList();
+            var idList = new CSharpTest.IDList();
             var contacts = idList.getIDList(list);
-            var data = new Write.ValueWriter();
+            var data = new CSharpTest.ValueWriter();
             data.writeData(contacts);
 
 

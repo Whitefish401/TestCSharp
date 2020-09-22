@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ID;
-using System;
 
 
-namespace FilterValues
+namespace CSharpTest
 {
     class ParentFilter
     {

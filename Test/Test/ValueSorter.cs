@@ -1,9 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using ID;
 
 
-namespace Sort
+namespace CSharpTest
 {
     class ValueSorter
     {

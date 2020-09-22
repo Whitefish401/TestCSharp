@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
 
-namespace ID
+namespace CSharpTest
 {
-    class idList
+    class IDList
     {
         public List<Contact> getIDList(List<string> list)
         {
