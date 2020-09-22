@@ -11,7 +11,7 @@ namespace CSharpTest
         {
             var indentSize = 2;
             var indent = new string(' ', level * indentSize);
-            var arrow = new string("->");
+            var arrow = "->";
             if (level == 1)
             {
                 Console.WriteLine(indent + row.ToString());
