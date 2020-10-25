@@ -5,9 +5,9 @@ namespace CSharpTest
 {
     class CSVReader
     {
-        public List<string> readCSVFile()
+        public List<string> ReadCSVFile(string file)
         {
-            using (var reader = new StreamReader(@"C:\Users\lukas\Desktop\TestCSharp\companies_data.csv"))
+            using (var reader = new StreamReader(file))
             {
                 List<string> contacts = new List<string>();
 

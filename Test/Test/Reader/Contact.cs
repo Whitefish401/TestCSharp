@@ -1,6 +1,6 @@
 ﻿namespace CSharpTest
 {
-    class Contact
+    public class Contact
     {
         public Contact(int id, int parent, string firstName, string lastName, string company, string city, string position, int firstNumber, int secondNumber, int thirdNumber)
         {
@@ -14,8 +14,6 @@
             FirstNumber = firstNumber;
             SecondNumber = secondNumber;
             ThirdNumber = thirdNumber;
-
-
         }
         public int ID;
         public int Parent;
@@ -32,5 +30,4 @@
             return FirstName + " " + LastName + " " + Company + " " + City + " " + Position;
         }
     }
-
 }
