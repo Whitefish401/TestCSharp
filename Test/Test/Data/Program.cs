@@ -10,7 +10,12 @@ namespace CSharpTest
             var file = filePath.WriteFilePath();
             var reader = new CSVReader();
             List<string> list = reader.ReadCSVFile(file);
-            var idList = new IDList(new ExceptionHandler());
+            if(list == null)
+            {
+                var handler = new NoFileExceptionHandler();
+                handler.ExitProgram();
+            }
+            var idList = new IDList(new IncorrectDataExceptionHandler());
             var contacts = idList.GetIDList(list);
             var data = new ValueWriter();
             data.WriteData(contacts);

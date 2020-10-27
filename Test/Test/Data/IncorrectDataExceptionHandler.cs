@@ -2,7 +2,7 @@
 
 namespace CSharpTest
 {
-    public class ExceptionHandler : IExceptionHandler
+    public class IncorrectDataExceptionHandler : IExceptionHandler
     {
         public void ExitProgram()
         {

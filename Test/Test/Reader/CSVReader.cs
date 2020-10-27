@@ -3,22 +3,27 @@ using System.IO;
 
 namespace CSharpTest
 {
-    class CSVReader
+    public class CSVReader
     {
         public List<string> ReadCSVFile(string file)
         {
-            using (var reader = new StreamReader(file))
+            try
             {
-                List<string> contacts = new List<string>();
-
-                while (!reader.EndOfStream)
+                using (var reader = new StreamReader(file))
                 {
-                    var line = reader.ReadLine();
+                    List<string> contacts = new List<string>();
 
-                    contacts.Add(line);
-
+                    while (!reader.EndOfStream)
+                    {
+                        var line = reader.ReadLine();
+                        contacts.Add(line);
+                    }
+                    return contacts;
                 }
-                return contacts;
+            }
+            catch(FileNotFoundException)
+            {
+                return null;
             }
         }
     }
