@@ -7,7 +7,7 @@ namespace CSharpTest
         public void ExitProgram()
         {
             Console.WriteLine("File does not exist. Try again");
-            System.Environment.Exit(1);
+            Environment.Exit(1);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ProgramTest
             var fakeFilePath = "C:/Users/lukas/Desktop/TestCSharp/FakeFile.csv";
             var reader = new CSVReader();
             List<string> list = reader.ReadCSVFile(fakeFilePath);
-            Assert.AreEqual(list, null, "Values sorted correctly");
+            Assert.IsNull(list);
         }
     }
 }
